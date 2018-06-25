@@ -29,8 +29,21 @@ var finishTrainLine;
 var finishTrainLineName;
 
 start = prompt("Enter Origin Station Name");
+// validation, if any train line index of "start" returns a negative number, prompt user again
+
+for (var count = 0; count < trainLines.length; count++){
+    if (trainLines[count].stations.indexOf(start) < 0){
+        start = prompt("Enter a Valid Origin Station Name");
+    }
+}
+
 finish = prompt("Enter Desitination Station Name");
 
+for (var count = 0; count < trainLines.length; count++){
+    if (trainLines[count].stations.indexOf(finish) < 0){
+        finish = prompt("Enter a Valid Destination Station Name");
+    }
+}
 
 //find out which train lines the starting station and the ending station are on - store in startTrainLine & finishTrainLine
 
