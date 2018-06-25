@@ -47,6 +47,10 @@ for (var trainLinesIndex = 0; trainLinesIndex < trainLines.length; trainLinesInd
     }
 }
 
+if (start === "Richmond"){
+    startTrainLine = finishTrainLine;
+    startTrainLineName = finishTrainLineName;
+}
 
 //first test to see if the start and finish train stations are the same
 if (start === finish){
@@ -72,7 +76,7 @@ else {
             }
             directions += (startTrainLine.stations[i]);
             numStops1 = Math.abs(howManyStations);
-            return directions;Windsor
+            return directions;
         };
         //output directions for when stations are on the same line
         console.log("origin: " + start)
