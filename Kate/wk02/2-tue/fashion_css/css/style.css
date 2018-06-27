@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif; 
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+    color: red;
+    font-weight: 100;
+}
+
+#betterdressed {
+    font-size: 40px;
+    color: lightgray;
+}
+
+nav {
+    padding: 0;
+    display: flex;
+}
+
+header a {
+    width: 16%;
+    text-align: center;
+    background: black;
+    color: white;
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+header nav :not(:first-child) {
+    border-left: 1px solid white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;   
+}
+
+main {
+    width: 68%
+}
+
+main article{
+    border-bottom: 1px solid lightgray;
+}
+
+aside {
+    width: 30%;
+    margin: 100px 0 0 0;    
+}
+
+
+.date {
+    font-size: 40px;
+    color: lightgray;
+    font-weight: 100;
+    margin: 15px 0 15px 0;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 15px 0 30px 0;
+
+}
+
+.main-article-content:first-letter {
+    font-size: 100px;
+    color: lightgray;
+    font-weight: 100;
+    float: left;
+    vertical-align: top;
+    margin: -10px 10px -10px 0;
+}
+
+aside div {
+    color: gray;
+    font-size: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+aside div:last-child {
+    border-bottom: none;
+}
+
+aside div h3  {
+    font-size: 30px;
+}
+
+aside img {
+    margin: 30px;;
+}
+
+ul {
+    color: red;
+}
+
+.continue,
+footer a {
+    font-size: 22px;
+    color: red;
+    text-align: right;
+}
+
+footer {
+    margin: 40px 0;
+}
+
+footer a {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a:first-child {
+    padding: 5px 5px 5px 0;    
+}
+
+footer a:not(:first-child){
+    border-left: 1px solid lightgray;
+}
+
+.copyright {
+    color: lightgray;
+    font-size: 22px;
+}
+
+/* .OtherPages li:not(:first-child){
+    font-size: 20px; 
+    border-left: 1px solid #d7d7d7;
+    padding: 5px;
+}
+selects everything except the first-child
+
+*/
+
+
+
