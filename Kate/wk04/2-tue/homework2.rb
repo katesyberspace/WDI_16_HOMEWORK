@@ -137,7 +137,7 @@ users = {
 users['Jonathan'][:twitter]
 
 # How would you add the number 7 to Erik's favorite numbers?
-users['Jonathan'][:favorite_numbers].push(7)
+users['Erik'][:favorite_numbers].push(7)
 
 # How would you add yourself to the users hash?
 users['Kate'] = {}
@@ -149,7 +149,9 @@ users['Erik'][:favorite_numbers]
 users['Erik'][:favorite_numbers].min
 
 # How would you return an array of Anil's favorite numbers that are also even?
-users['Anil'][:favorite_numbers].select {|num| num%2 == 0}
+users['Anil'][:favorite_numbers].select {|num| 
+  num.even?
+}
 
 # How would you return an array of the favorite numbers common to all users?
 
@@ -166,4 +168,10 @@ users['Anil'][:favorite_numbers].select {|num| num%2 == 0}
 
 # How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 
-[].concat(users['Jonathan'][:favorite_numbers], users['Anil'][:favorite_numbers], users['Erik'][:favorite_numbers]).sort.uniq
+# # [].concat(users['Jonathan'][:favorite_numbers], users['Anil'][:favorite_numbers], users['Erik'][:favorite_numbers]).sort.uniq
+
+# (users['Jonathan'][:favorite_numbers] | users['Erik'][:favorite_numbers] | users['Anil'][:favorite_numbers]).sort
+
+users.values.map do |hash|
+  hash[:favorite_numbers]
+end.flatten.uniq.sort

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>KSY Stock Exchange - Definitely Not Fraudulent</title>
+  <link rel="stylesheet" href="/price.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+<body>
+  <h1>ticker: <%=@stockname%></h1>
+  <h2>company name: <%=@companyname%> </h2>
+  <h2>live price: <span id="price">$<%=@stockprice%></span></h2>
+  <form action="/">
+    <button class="home-btn">Home</button>
+  </form>
+</body>
+</html>

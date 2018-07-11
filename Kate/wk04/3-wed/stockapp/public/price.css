@@ -1,0 +1,13 @@
+body {
+  background-color: #a5e5aa;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  /* font-family: 'Playfair Display', serif; */
+  font-size: 4em;
+}
+
+#price {
+  color: forestgreen;
+}
