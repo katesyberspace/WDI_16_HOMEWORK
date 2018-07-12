@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>99 Bottles But A Beer Aint One</title>
+  <link rel='stylesheet' href="/stylesheets/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Rufina" rel="stylesheet">
+</head>
+<body id = "grad1">
+  <% if @num.to_i >= 1 %>
+    <p>
+      <%=@num%> bottles of beer on the wall.
+      <a href="<%=@num.to_i-1%>">Take one down.</a>
+    </p>
+  <% else %>
+    <p>No beer left.</p><a href="/">Start Over.</a>
+  <% end %>
+</body>
+</html>

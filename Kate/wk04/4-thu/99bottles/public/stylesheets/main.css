@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  background-color: pink;
+  text-align: center;
+}
+
+#grad1 {
+  height: 500px;
+  background: pink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,  cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right,  cyan, blue, violet); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,  cyan, blue, violet); /* Standard syntax (must be last) */
+}
+
+p {
+  font-family: 'Rufina', serif;
+  font-size: 4em;
+  color: white;
+  vertical-align: 50vh;
+}
+
+a {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-decoration: none;
+  /* text-shadow: 0 5px  black; } */
+}

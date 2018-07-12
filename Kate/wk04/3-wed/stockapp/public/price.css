@@ -8,6 +8,10 @@ h1 {
   font-size: 4em;
 }
 
+/* .company-name-logo { */
+  /* display: flex; */
+/* } */
+
 #price {
   color: forestgreen;
 }

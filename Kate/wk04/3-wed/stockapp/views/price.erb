@@ -9,11 +9,19 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 </head>
 <body>
-  <h1>ticker: <%=@stockname%></h1>
-  <h2>company name: <%=@companyname%> </h2>
-  <h2>live price: <span id="price">$<%=@stockprice%></span></h2>
+  <% if @quote%>
+    <h1>ticker: <%=@stockname%></h1>
+    <%# <div class ='company-name-logo'> %>
+    <h2>company name: <%=@quote.company_name%> </h2>
+    <img src="<%=StockQuote::Stock.logo(@stockname).url%>" alt="">
+
+    <h2>live price: <span id="price">$<%=@quote.iex_realtime_price%></span></h2>
+  <% else %>
+    <h1>Stock not found in exchange</h1>
+  <% end %>  
+
   <form action="/">
-    <button class="home-btn">Home</button>
+    <button class="btn">Home</button>
   </form>
 </body>
 </html>
