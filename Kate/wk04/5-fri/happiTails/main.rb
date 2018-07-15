@@ -24,39 +24,6 @@ def display_menu
   puts ''
 end
 
-def display_shelter_animals
-  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
-  puts '       Shelter Animals Available Fur Adoption'
-  $shelter[:animals].each do |animal|
-    puts ''
-    puts ">> #{animal.name} the #{animal.species}, gender:#{animal.gender}, age: #{animal.age}, toys: #{animal.toys.join(', ')}."
-  end
-  puts ''
-  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
-  puts ''
-end
-
-def display_shelter_clients
-  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
-  puts '               Clients of the Shelter'
-  puts ''
-  $shelter[:clients].each do |client|
-    if client.pets.length == 0
-      puts "Client: #{client.name}, number of children: #{client.num_children}, age: #{client.age}."
-      puts "Pets owned: none"
-    elsif client.pets.length >= 1 
-      puts "Client: #{client.name}, number of children: #{client.num_children}, age: #{client.age}."
-      puts "Pets owned:"
-      client.pets.each do |pet|
-        puts ">>#{pet.name} the #{pet.species}, gender: #{pet.gender}, age:#{pet.age}, toys: #{pet.toys.join(', ')}."
-      end
-    end  
-    puts ''  
-  end
-  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
-  puts ''  
-end
-
 def run_menu 
   display_menu()
   menu_selection = gets.chomp
@@ -109,6 +76,39 @@ def welcome
   end
 end
 
+def display_shelter_animals
+  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
+  puts '       Shelter Animals Available Fur Adoption'
+  $shelter[:animals].each do |animal|
+    puts ''
+    puts ">> #{animal.name} the #{animal.species}, gender:#{animal.gender}, age: #{animal.age}, toys: #{animal.toys.join(', ')}."
+  end
+  puts ''
+  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
+  puts ''
+end
+
+def display_shelter_clients
+  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
+  puts '               Clients of the Shelter'
+  puts ''
+  $shelter[:clients].each do |client|
+    if client.pets.length == 0
+      puts "Client: #{client.name}, number of children: #{client.num_children}, age: #{client.age}."
+      puts "Pets owned: none"
+    elsif client.pets.length >= 1 
+      puts "Client: #{client.name}, number of children: #{client.num_children}, age: #{client.age}."
+      puts "Pets owned:"
+      client.pets.each do |pet|
+        puts ">>#{pet.name} the #{pet.species}, gender: #{pet.gender}, age:#{pet.age}, toys: #{pet.toys.join(', ')}."
+      end
+    end  
+    puts ''  
+  end
+  puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
+  puts ''  
+end
+
 def create_animal
   print 'Enter animal species: '
   species = gets.chomp
@@ -145,9 +145,10 @@ def add_animal_to_shelter
   puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
   puts ''
   puts "Thank you! Your animal has been created and is playing"
-  puts '         with its new friends in the shelter.     
-  puts    '
+  puts '         with its new friends in the shelter.'     
+  puts ''
   puts '=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^='
+  puts ''
   run_menu()
 end
 
