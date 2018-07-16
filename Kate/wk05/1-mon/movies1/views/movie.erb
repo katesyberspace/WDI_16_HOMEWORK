@@ -5,7 +5,7 @@
   @poster = @result['Poster']
   @actors = @result['Actors']
   @rating = @result["imdbRating"]
-  @votes = @result['imdbVotes']
+  @votes = @result["imdbVotes"]
 %>
 
 <main class = 'movie'>
@@ -16,7 +16,7 @@
     <section class='title-bar'>
       <h1 class='name'><%=@title%> <span id='year'>(<%=@year%>)</span></h1>
       <div class=rating>
-        <p><span id='rating'><%=@rating%></span>/10</p>
+        <p><span id='rating'>&#9733 <%=@rating%></span>/10</p>
       </div>
     </section>
     <section class='plot'>

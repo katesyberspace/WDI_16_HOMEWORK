@@ -3,7 +3,7 @@
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   background-color: #2e3c51;
 }
 
@@ -22,7 +22,7 @@ body{
 }
 
 aside {
-  width: 45%;
+  width: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -38,7 +38,8 @@ aside > * {
   /* background-color: #353b44; */
   /* color: white; */
   padding: 5px;
-  box-shadow: 10px 10px 8px #888888;
+
+  border-bottom: 3px solid #2e3c51;
 }
 
 
@@ -56,12 +57,18 @@ aside > * {
 }
 
 .plot {
+  padding: 5px;
   flex-grow: 1;
+  border-bottom: 3px solid #2e3c51;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  
   /* background-color: #353b44;
   color: white; */
 }
 
 .actors {
+  padding: 5px;
   /*orskground-color: #718db7; */
   /* color: white; */
 }
