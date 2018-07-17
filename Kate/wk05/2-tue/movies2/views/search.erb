@@ -1,14 +1,45 @@
- <%
-  @search_results = @result_s['Search']
 
- %>
+<% if @result_s['totalResults'] == '1' %>
+ <% 
+  # @search_results = @result_s['Search']
+  @title = @result_s['Search'][0]['Title']
+  @year = @result_s['Search'][0]['Year']
+  @plot = @result_s['Search'][0]['Plot']
+  @poster = @result_s['Search'][0]['Poster']
+  @actors = @result_s['Search'][0]['Actors']
+  @rating = @result_s['Search'][0]["imdbRating"]
+  @votes = @result_s['Search'][0]["imdbVotes"]
+  %>
 
-<% @search_results.each do |result| %>
-  <p>
-    <a href="/movie/<%=result['Title']%>">
-        <%=result['Title']%>
-    </a>
-  
-  </p>
-<%end%>
+  <main class = 'movie'>
+    <div class='poster'>
+      <img src="<%=@poster%>" alt="Movie poster for <%=@title%>">
+    </div>
+    <aside>
+      <section class='title-bar'>
+        <h1 class='name'><%=@title%> <span id='year'>(<%=@year%>)</span></h1>
+        <div class=rating>
+          <p><span id='rating'>&#9733 <%=@rating%></span>/10</p>
+        </div>
+      </section>
+      <section class='plot'>
+        <h2><%=@plot%></h2>
+      </section>
 
+      <section class='actors'>
+        <p>Actors: <%=@actors%></p>
+      </section>
+    </aside>
+  </main>
+
+<% else %>
+
+  <% @result_s['Search'].each do |result| %>
+    <p>
+      <a href="/movie/<%=result['Title']%>">
+          <%= result['Title'] %>
+      </a>
+    </p>
+  <%end%>
+
+<% end %>
