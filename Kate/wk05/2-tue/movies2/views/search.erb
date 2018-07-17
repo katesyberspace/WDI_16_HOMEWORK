@@ -1,0 +1,14 @@
+ <%
+  @search_results = @result_s['Search']
+
+ %>
+
+<% @search_results.each do |result| %>
+  <p>
+    <a href="/movie/<%=result['Title']%>">
+        <%=result['Title']%>
+    </a>
+  
+  </p>
+<%end%>
+
