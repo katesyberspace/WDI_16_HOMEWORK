@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Didact Gothic', sans-serif;
+  background-color: #2e3c51;
+}
+
+a {
+color: white;
+text-decoration: none;
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+}
+
+.movie > * {
+  margin: 0 5px;
+}
+
+
+aside {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside > * {
+  background-color: #447f92;
+  color: white;
+}
+
+.title-bar  {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 3px solid #2e3c51;
+}
+
+
+.rating {
+  justify-content: space-evenly;  
+
+}
+.rating-votes-box p {
+  margin-bottom: 0;
+
+}
+
+.rating-votes-box p:last-child {
+  margin-top: 0;
+}
+
+.plot {
+  padding: 5px;
+  flex-grow: 1;
+  border-bottom: 3px solid #2e3c51;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  
+  /* background-color: #353b44;
+  color: white; */
+}
+
+.actors {
+  padding: 5px;
+  /*orskground-color: #718db7; */
+  /* color: white; */
+}
+
+
+
+

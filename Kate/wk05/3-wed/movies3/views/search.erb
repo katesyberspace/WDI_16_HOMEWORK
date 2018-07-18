@@ -1,0 +1,9 @@
+
+  <% @result_s['Search'].each do |result| %>
+    <p>
+      <a href="/movie/<%=result['Title']%>">
+          <%= result['Title'] %>
+      </a>
+    </p>
+  <%end%>
+
