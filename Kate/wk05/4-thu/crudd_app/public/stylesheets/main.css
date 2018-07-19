@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 600px;
+  height: 200px;
+  background-image: url(https://dwater.com.au/wp-content/uploads/2014/09/Yarra-Trams.jpg);
+  background-size: contain;
+  color: white;
+}
+
+img {
+  width: 100%
+}
+
+section {
+  display: flex;
+  align-content: center;
+
+}
+
+.rider-img {
+  width: 300px;
+}
+
+.rider-details{
+  width: 300px;
+}

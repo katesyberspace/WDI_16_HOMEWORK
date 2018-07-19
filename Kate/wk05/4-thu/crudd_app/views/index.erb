@@ -1,0 +1,9 @@
+<h1>People currently on board:</h1>
+
+<% @riders.each do |rider|%>
+  <p>
+    <a href="/riders/<%=rider.id%>">
+      <%=rider.name%>
+    </a>
+  </p>
+<% end %>
