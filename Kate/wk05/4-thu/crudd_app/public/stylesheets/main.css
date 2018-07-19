@@ -2,14 +2,19 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 53%
+}
+
 header {
-  width: 600px;
+  /* width: 600px; */
   height: 200px;
   background-image: url(https://dwater.com.au/wp-content/uploads/2014/09/Yarra-Trams.jpg);
   background-size: contain;
   color: white;
 }
 
+/* rider details template */
 img {
   width: 100%
 }
@@ -27,3 +32,18 @@ section {
 .rider-details{
   width: 300px;
 }
+
+
+/* index */
+
+.title-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-add < * {
+  vertical-align: middle;
+
+}
+
