@@ -1,30 +1,21 @@
-<%
-  @title = @result_t['Title']
-  @year = @result_t['Year']
-  @plot = @result_t['Plot']
-  @poster = @result_t['Poster']
-  @actors = @result_t['Actors']
-  @rating = @result_t["imdbRating"]
-  @votes = @result_t["imdbVotes"]
-%>
 
 <main class = 'movie'>
   <div class='poster'>
-    <img src="<%=@poster%>" alt="Movie poster for <%=@title%>">
+    <img src="<%=poster%>" alt="Movie poster for <%=title%>">
   </div>
   <aside>
     <section class='title-bar'>
-      <h1 class='name'><%=@title%> <span id='year'>(<%=@year%>)</span></h1>
+      <h1 class='name'><%=title%> <span id='year'>(<%=year%>)</span></h1>
       <div class=rating>
-        <p><span id='rating'>&#9733 <%=@rating%></span>/10</p>
+        <p><span id='rating'>&#9733 <%=rating%></span>/10</p>
       </div>
     </section>
     <section class='plot'>
-      <h2><%=@plot%></h2>
+      <h2><%=plot%></h2>
     </section>
 
     <section class='actors'>
-      <p>Actors: <%=@actors%></p>
+      <p>Actors: <%=actors%></p>
     </section>
   </aside>
 </main>
