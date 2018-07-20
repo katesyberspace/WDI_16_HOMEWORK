@@ -8,8 +8,6 @@ class Clients
     @pets_owned = []
   end
 
-  
-
   def add_client_details(name, age, num_children)
     @name = name
     @num_children = num_children

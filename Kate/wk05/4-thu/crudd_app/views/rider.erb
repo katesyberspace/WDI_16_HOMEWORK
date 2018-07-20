@@ -1,11 +1,24 @@
+
+
 <section class="rider">
   <div class="rider-img">
-    <img src="<%=@rider.img_url%>" alt="Picture of <%=@rider.name%>">
+    <% if @rider.img_url == nil%>
+      <img src="/images/alien.png" alt="Picture of <%=@rider.name%>">
+    <% else %>
+      <img src="<%=@rider.img_url%>" alt="Picture of <%=@rider.name%>">
+    <% end %>
   </div>
   <div class="rider-details">
     <h2> <%=@rider.name%></h2>
     <p><%=@rider.age%> years old</p>
     <p>Boards the tram at: <%=@rider.board_at%></p>
     <p>Alights the tram at: <%=@rider.alight_at%></p>
+    <nav class = "changes">
+      <form action="/">
+        <button>Home</button>
+      </form>
+      <a href="/riders/<%= @rider.id%>/edit">Edit</a>
+
+    </nav>
   </div>
 </section>
