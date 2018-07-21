@@ -37,7 +37,7 @@ end
 # --> get rider id from the params, and then sends to rider erb (details page)
 get '/riders/:rider_id' do
   @rider = Rider.find(params[:rider_id])
-  erb :rider
+  erb :rider_details
 end
 
 # --> get here from the edit page, find the rider from params, asign new values from params
@@ -51,4 +51,13 @@ put '/riders/:id' do
   rider.save
 
   redirect "riders/#{params[:id]}"
+end
+
+
+# --> find rider, delete rider, redirect somewhere safe
+
+delete '/riders/:id' do
+  rider = Rider.find(params[:id])
+  rider.destroy
+  redirect '/'
 end

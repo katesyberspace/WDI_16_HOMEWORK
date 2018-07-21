@@ -17,8 +17,13 @@
       <form action="/">
         <button>Home</button>
       </form>
-      <a href="/riders/<%= @rider.id%>/edit">Edit</a>
 
+      <a href="/riders/<%= @rider.id%>/edit">Edit</a>
+      
+      <form action="/riders/<%=@rider.id%>" method = "post">
+        <input type="hidden" name = "_method" value = "delete">
+        <button>Delete</button>
+      </form>
     </nav>
   </div>
 </section>
