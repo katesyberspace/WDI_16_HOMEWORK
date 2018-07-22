@@ -13,7 +13,15 @@ CREATE TABLE reviews (
   id SERIAL4 PRIMARY KEY,
   content TEXT NOT NULL,
   rider_id INTEGER NOT NULL,
-  FOREIGN KEY (rider_id) REFERENCES riders (id) ON DELETE RESTRICT   
+  FOREIGN KEY (rider_id) REFERENCES riders (id) ON DELETE RESTRICT,
+  FOREGN KEY (user_id) REFERENCES users (id) ON DELETE RESTRICT   
+);
+
+CREATE TABLE users (
+  id SERIAL4 PRIMARY KEY,
+  name VARCHAR(200),
+  email VARCHAR(300),
+  password_digest VARCHAR(400)
 );
 
 INSERT INTO riders (name, age, board_at, alight_at, img_url) 
@@ -27,3 +35,7 @@ VALUES ('ben', 33, 'glenhuntly road', 'lt collins street', 'http://tompresskit.p
 
 INSERT INTO riders (name, age, board_at, alight_at, img_url) 
 VALUES ('fiona', 27, 'wattletree road', 'queensberry street', 'https://petapixel.com/assets/uploads/2014/11/olga.jpg');
+
+INSERT INTO reviews (content, rider_id)
+VALUES ('wow this person needs a shower!', 2);
+
