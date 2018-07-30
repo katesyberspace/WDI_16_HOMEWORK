@@ -8,6 +8,7 @@ body {
   background-color: #003366;
   color: white;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 header {
@@ -69,6 +70,7 @@ img {
 }
 
 section {
+  width: 100%;
   display: block;
   align-content: center;
 
@@ -111,30 +113,32 @@ section {
 .title-add {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin: 2vw;
   background-color: #006666;
   margin: 0;
   padding: 0 2vw;
+  font-size: 1em;
+
 }
 
 
 .title-add > h1 {
-  font-size: 1.5em;
   font-weight: 300; 
 }
 
 .title-add > a {
   color: white;
   text-decoration: none;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.7em;
+  font-size: 1.7em;
+  line-height: 1.7em;
 }
 
 .riders-list > p > a {
   text-decoration: none;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.7em;
   
 }
 
