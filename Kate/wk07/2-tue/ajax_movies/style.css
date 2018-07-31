@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  text-align: center;
+  padding: 5% 20%;
+  animation: change-color 5000ms ease-out infinite;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+@keyframes change-color {
+  0% {background: whitesmoke}
+  100% { background: black}
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid greenyellow;
+  outline: none;
+  color: #ff00ee;
+  font-size: 20px;
+  animation: change-input 5000ms infinite;
+  text-align: center;
+  font-size: 20px;
+}
+
+@keyframes change-input {
+  0% {border-bottom-color:black}
+  100% {border-bottom-color: greenyellow}
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  color: #ff00ee;
+  animation: change-button 5000ms infinite;
+}
+
+@keyframes change-button {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ff00ee;
+  }
+}
+
+
+h1, h2 {
+  color: whitesmoke;
+  animation: change-text-color 5000ms infinite;
+  font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes change-text-color {
+  0% {color: black}
+  100% {color: whitesmoke}
+}
+
+.result {
+  margin: 10% auto;
+}
+
+.your-results {
+  color: white;
+  font-size: 20px;
+}
+
+a {
+  color:#ff00ee;
+  text-decoration: none;
+  
+}
