@@ -5,8 +5,8 @@
 body {
   background: black;
   text-align: center;
-  padding: 5% 20%;
-  animation: change-color 5000ms ease-out infinite;
+  margin: 0 auto;
+  animation: change-color 5000ms ease-out ;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -22,7 +22,7 @@ input {
   outline: none;
   color: #ff00ee;
   font-size: 20px;
-  animation: change-input 5000ms ease-out infinite;
+  animation: change-input 5000ms ease-out ;
   text-align: center;
   font-size: 20px;
 }
@@ -37,7 +37,7 @@ button {
   outline: none;
   border: none;
   color: #ff00ee;
-  animation: change-button 5000ms infinite;
+  animation: change-button 5000ms ;
 }
 
 @keyframes change-button {
@@ -52,7 +52,7 @@ button {
 
 h1, h2 {
   color: whitesmoke;
-  animation: change-text-color 5000ms infinite;
+  animation: change-text-color 5000ms ;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -62,17 +62,50 @@ h1, h2 {
 }
 
 .result {
-  margin: 10% auto;
+  margin: 5% auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.your-results {
+/* .your-results {
   color: white;
   font-size: 20px;
   font-family: 'Roboto Mono', monospace;
+} */
+
+.movie {
+  width: 24%;
+  height: auto;
+  margin-right: 1%;
+}
+
+.img-wrapper {
+  height: 90%;
+}
+
+.poster {
+  animation: spin 4000ms;
+  transition: all .5s ease-in-out;
+}
+
+/* translate3d(7ch, -0.6in, 5em); */
+
+.poster:hover {
+  transform: scale(1.2,1.2);
+  /* box-shadow: 0px 46px 0px -13px greenyellow; */
+}
+
+@keyframes spin {
+  0% {transform: rotateY(0deg)}  
+  100% {transform: rotateY(360deg)}
 }
 
 a {
   color:#ff00ee;
   text-decoration: none;
   
+}
+
+a:hover {
+  color: greenyellow;
 }
