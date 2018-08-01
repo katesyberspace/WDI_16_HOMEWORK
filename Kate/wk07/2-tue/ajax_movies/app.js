@@ -2,7 +2,6 @@ var input = document.querySelector('input')
 var button = document.querySelector('button')
 var result = document.querySelector('.result')
 
-
 button.addEventListener('click', function(event){
   result.innerHTML = '';
   var options = {
