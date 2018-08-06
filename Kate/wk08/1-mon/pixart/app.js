@@ -2,7 +2,7 @@ var colorForm = document.querySelector('.color-form');
 var colorInput = document.querySelector('.color-input');
 // var colorBtn = document.querySelector('button')
 var brush = $('.brush');
-var body = $('body');
+var $body = $('body');
 
 
 var clickHandler = function(event){
@@ -20,9 +20,17 @@ var createSquares = function(){
   for (var i = 0; i<1000; i++){
     var square = document.createElement('div');
     square.classList.add('square');
-    $(body).append(square);
+    $body.append(square);
   }
 }
-
-
 createSquares();
+
+
+
+var changeSquareColor = function(event){
+  $target = $(event.target)
+  var color = colorInput.value
+  $target.css("background-color", color)
+}
+
+$body.on('click', '.square', changeSquareColor)
