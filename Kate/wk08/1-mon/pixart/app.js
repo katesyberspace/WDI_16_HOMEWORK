@@ -33,4 +33,4 @@ var changeSquareColor = function(event){
   $target.css("background-color", color)
 }
 
-$body.on('click', '.square', changeSquareColor)
+$body.on('mouseenter', '.square', changeSquareColor)
