@@ -3,11 +3,9 @@ var searchForm = $('.search-form')
 var searchInput = $('.search-input')
 
 // 1FjzKpIwMaDsjUpnkhLD5OIUG7ZvjmW8
-var offset = 0;
+var offset = 11;
 
 var scrollHandler = function(){
-  // event.preventDefault();
-
   const options = {
     url: 'http://api.giphy.com/v1/gifs/search',
     method: 'get',
@@ -20,7 +18,6 @@ var scrollHandler = function(){
       offset: offset
     }
   }
-
   const showSearchResults = function(res){
     res.data.forEach(gif => {
       let p = $('<p>')
@@ -32,8 +29,7 @@ var scrollHandler = function(){
       gifWrapper.append(p);
     });
   }
-  offset = offset+10;
-  
+  offset = offset+10
   $.ajax(options).done(showSearchResults)
 }
 
@@ -52,7 +48,6 @@ var submitHandler = function(event){
       rating: 'g'
     }
   }
-
   const showSearchResults = function(res){
     res.data.forEach(gif => {
       let p = $('<p>');
@@ -64,15 +59,14 @@ var submitHandler = function(event){
       gifWrapper.append(p);
     });
 
-    offset = offset+10
+    offset = offset+11
 
     $(window).scroll(function () {
-    if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
-      scrollHandler();
-    }
-  });
-}
-
+      if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+        scrollHandler();
+      }
+    });
+  }
   $.ajax(options).done(showSearchResults)
 }
 
