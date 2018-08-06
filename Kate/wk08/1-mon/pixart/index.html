@@ -5,25 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Didact+Gothic" rel="stylesheet">
   <title>PixArt</title>
 </head>
 <body>
-  <form class = "color-form" action="">
-    <input class = "color-input" type="text">
-    <button class="color-btn">set color</button>
-  </form>
+  <h1>Make Pixart!</h1>
 
-  
-  <div class="brush">brush color</div>
-  <p></p>
+  <div class="forms-wrapper">
+    <div class="colors">
+      <form class = "color-form" action="">
+        <input class = "color-input" type="text">
+        <button class="color-btn">set color</button>
+      </form>
+      <div class="brush">brush color</div>
+    </div>
+    <form class="imdb-form"action="">
+      <label for="">set an imdb movie poster as the background</label>
+      <input class="imdb-input" type="text">
+      <button class="imdb-btn">get poster</button>
+    </form>
+  </div>
 
-  <form class="imdb-form"action="">
-    <label for="">set an imdb movie poster as the background</label>
-    <input class="imdb-input" type="text">
-    <button class="imdb-btn">get poster</button>
-  </form>
-  <p></p>
 
+  <div class="squares-wrapper"></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="app.js"></script>

@@ -2,16 +2,64 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 80px;
+  font-weight: 200;
+}
+
+
 .brush {
-  height: 100px;
-  width: 100px;
+  height: fit-content;
+  width: fit-content;
   border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  margin-left: 5px;
+}
+
+.forms-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 10px auto;
+  justify-items: center;
+}
+
+.colors {
+  display: flex;
+  width: 40%;
+}
+
+.imdb-form {
+  width: 60%;
+  text-align: right;
+}
+
+
+.squares-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: 0 auto;
+
 }
 
 .square {
   height: 20px;
   width: 20px;
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid lightgray;
+  background-color: gray;
+}
+
+.square:hover {
+  cursor: url(images/paint-brush.png), auto;
 }
 

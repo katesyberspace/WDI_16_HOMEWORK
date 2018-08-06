@@ -6,6 +6,7 @@ var $body = $('body');
 var $imdbForm = $('.imdb-form');
 var $imdbInput = $('.imdb-input');
 var $imdbBtn = $('.imdb-btn');
+var $squaresWrapper = $('.squares-wrapper');
 
 
 var clickHandler = function(event){
@@ -23,12 +24,11 @@ var createSquares = function(){
   for (var i = 0; i<1000; i++){
     var square = document.createElement('div');
     square.classList.add('square');
-    $body.append(square);
+    $squaresWrapper.append(square);
   }
 }
+
 createSquares();
-
-
 
 var changeSquareColor = function(event){
   $target = $(event.target)
@@ -62,6 +62,5 @@ var imdbClickHandler = function(event){
   $.ajax(options).done(setBackgroundImage);
   
 }
-
 
 $imdbForm.on('click', '.imdb-btn', imdbClickHandler);
