@@ -12,6 +12,8 @@ h1 {
   font-family: 'Cabin Sketch', cursive;
   font-size: 80px;
   font-weight: 200;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 
@@ -42,6 +44,9 @@ h1 {
   text-align: right;
 }
 
+label {
+  padding: 2px;
+}
 
 .squares-wrapper {
   display: flex;
@@ -55,7 +60,7 @@ h1 {
   height: 20px;
   width: 20px;
   /* display: inline-block; */
-  border: 1px solid lightgray;
+  /* border: .25px solid lightgray; */
   background-color: gray;
 }
 

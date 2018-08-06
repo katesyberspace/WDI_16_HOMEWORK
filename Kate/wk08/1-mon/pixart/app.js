@@ -27,7 +27,6 @@ var createSquares = function(){
     $squaresWrapper.append(square);
   }
 }
-
 createSquares();
 
 var changeSquareColor = function(event){
@@ -55,6 +54,8 @@ var imdbClickHandler = function(event){
     
   const setBackgroundImage = function(res){
     $body.css('background-image', `url("${res.Poster}")`);
+    $('h1').css('background', 'greenyellow');
+    $('label').css('background', 'greenyellow');
     // debugger
   };
     
