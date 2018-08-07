@@ -1,0 +1,23 @@
+<h1>what kate ate</h1>
+
+
+<% @dish.errors.full_messages.each do |message| %>
+  <p> <%= message %> </p>
+<% end %>
+
+<h3>add a new dish!</h3>
+<form action="/dishes" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="text" name="name" placeholder="dish name" value="<%= @dish.name%>">
+  <input type="text" name="restaurant" placeholder="restaurant" value="<%= @dish.restaurant%>">
+  <input type="text" name="img_url" placeholder="image url" value="<%= @dish.img_url%>">
+  <button>add</button>
+</form>
+
+<% @dishes.each do |dish|%>
+  <p>
+    <a href="/dishes/<%= dish.id%>">
+      <%= dish.name %>
+    </a>
+  </p>
+<% end %>

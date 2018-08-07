@@ -1,0 +1,24 @@
+<h2><%= @dish.name %></h2>
+<h3>eaten at: <%= @dish.restaurant %></h3>
+
+
+<p>edit this dish:</p>
+<form action="/dishes/<%= @dish.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="_method" value="put">
+  <label for="">dish name:</label>
+  <input type="text" name="name" value="<%= @dish.name %>">
+  <label for="">restaurant</label>
+  <input type="text" name="restaurant" value="<%= @dish.restaurant %>">
+  <label for="">dish image url</label>
+  <input type="text" name="img_url" value="<%= @dish.img_url %>">
+  <button>save</button>
+</form>
+
+<form action="/dishes/<%= @dish.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<div><img src="<%= @dish.img_url%>" alt=""></div>

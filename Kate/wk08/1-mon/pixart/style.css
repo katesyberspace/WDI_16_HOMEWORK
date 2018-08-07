@@ -29,7 +29,7 @@ h1 {
 .forms-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 1000px;
   margin: 10px auto;
   justify-items: center;
 }
