@@ -6,7 +6,7 @@ const _ = require('lodash')
 const logger = require('./logger.js')
 // const controller = require('./controller.js')
 
-compliments = [
+var compliments = [
 "Your instructors love you",
 "High five = ^5",
 "Shut up and take my money",
@@ -14,7 +14,7 @@ compliments = [
 "The Force is strong with you"
 ]
 
-insults = [
+var insults = [
   "you smell awful",
   "your s looks like a 5",
   "your pant legs are tucked into your socks",
